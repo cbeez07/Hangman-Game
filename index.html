@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hangman</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var tvShows = ["scrubs", "firefly", "the office"];
+
+    var wins = 0;
+    var losses = 0;
+    var word = [];
+    var letters = hangmanGuess.length;
+
+    var hangmanGuess = tvShows[Math.floor(Math.random() * tvShows.length)];
+
+    for (var i = 0; i < hangmanGuess.length; i++) {
+      word[i]="_";
+    }
+
+    document.onkeyup = function(event) {
+      var userGuess = event.key;
+
+    }
+
+
+
+    </script>
+
+  </body>
+</html>
