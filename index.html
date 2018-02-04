@@ -2,33 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Hangman</title>
   </head>
-  <body>
+  <body onload="startUp()" class="">
 
-    <script type="text/javascript">
+    <header class="jumbotron mx-auto h1">
+      Hangman TV Shows
+    </header>
+    <div>
+      <p id = "startup">
+        You have 7 guesses to guess the word.
+      </p>
+      <P>
+        Wins: <script id = "win"></script>
+      </P>
+      <p>
+        Current Word:
+      </p>
 
-    var tvShows = ["scrubs", "firefly", "the office"];
+      <p id = "currentWord">
+      </p>
 
-    var wins = 0;
-    var losses = 0;
-    var word = [];
-    var letters = hangmanGuess.length;
+      <p>
+        Number of guesses remaining:
+      </p>
+      <p id = "guesses">
+      </p>
 
-    var hangmanGuess = tvShows[Math.floor(Math.random() * tvShows.length)];
+      <p>
+        Letters Guessed:
+      </p>
 
-    for (var i = 0; i < hangmanGuess.length; i++) {
-      word[i]="_";
-    }
+      <p id = "letters">
+      </p>
 
-    document.onkeyup = function(event) {
-      var userGuess = event.key;
-
-    }
-
+    </div>
 
 
-    </script>
+
+
+
+    <script src="assets/javascript/game.js"></script>
 
   </body>
 </html>
