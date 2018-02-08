@@ -1,0 +1,4 @@
+body, header {
+  background-image: url(../images/BGimage.jpg);
+  background-size: cover;
+}
