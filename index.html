@@ -3,43 +3,81 @@
   <head>
     <meta charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" href="/css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Gloria+Hallelujah" rel="stylesheet">
     <title>Hangman</title>
   </head>
-  <body onload="startUp()" class="text-light">
+  <body class="text-light">
 
-    <header class="jumbotron jumbotron-fluid text-center h1 text-primary">
+    <header class="jumbotron jumbotron-fluid text-center display-1 text-light" id="header">
       Hangman: Animals
     </header>
-    <div>
-      <p id = "startup">
-        You have 7 guesses to guess the animal.
-      </p>
-      <P>
-        Wins:
-      </P>
-      <p id = "win">
 
-      </p>
-      <p>
-        Current Word:
-      </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 h3">
+          <p id = "startup">
+            Press Any Key To Start:
+          </p>
+        </div>
+        <div class="col-md-5">
+        </div>
+        <div class="col-md-4">
+          <div id="image">
 
-      <p id = "currentWord">
-      </p>
+          </div>
+        </div>
+      </div>
 
-      <p>
-        Number of guesses remaining:
-      </p>
-      <p id = "guesses">
-      </p>
+      <hr>
 
-      <p>
-        Letters Guessed:
-      </p>
+      <div class="row">
+        <div class="col-md-3">
+          <P>
+            Wins:
+          </P>
+          <p id = "win">
+          </p>
+        </div>
+      </div>
 
-      <p id = "letters">
-      </p>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-3">
+          <p>
+            Current Word:
+          </p>
+          <p id = "currentWord" class="h4">
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-3">
+          <p>
+            Number of guesses remaining:
+          </p>
+          <p id = "guesses">
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-3">
+          <p>
+            Letters Guessed:
+          </p>
+          <p id = "letters">
+          </p>
+        </div>
+      </div>
+
 
     </div>
 

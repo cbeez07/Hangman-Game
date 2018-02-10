@@ -21,6 +21,7 @@ var theWord = document.getElementById("currentWord")
 var guessesLeft = 7;
 var lettersUsersGuessed = [];
 var userGuess;
+var gameHasStarted = false;
 
 var isAlpha = function(ch){
   return /^[A-Z]$/i.test(ch);
@@ -42,11 +43,16 @@ function startUp() {
   document.getElementById('guesses').innerHTML = guessesLeft;
   document.getElementById('letters').innerHTML = lettersUsersGuessed;
   document.getElementById("win").innerHTML = wins;
+  gameHasStarted = true;
+  $('#image').empty();
+  $('#startup').hide();
 }
 
 function gameLoss() {
-  alert('You have lost! The animal was ' + words);
-  startUp();
+  console.log('one');
+  $('#image').prepend('<img id = theImage src = "assets/images/you-lose.jpeg" />');
+  $('#startup').show();
+  gameHasStarted = false;
 }
 
 function wrongGuessesLeft() {
@@ -76,19 +82,19 @@ function correctGuess() {
 function checkGameWin() {
   if (hangmanAnswer.indexOf("_") === -1) {
     wins++;
-    alert('You Win!! The animal is ' + words);
-    startUp();
+    $('#image').prepend('<img id = theImage src = "assets/images/you-win.jpeg" />');
+    $('#startup').show();
+    gameHasStarted = false;
   }
 }
 
 document.onkeyup = function(event) {
   userGuess = event.key;
-  if (isAlpha(event.key)) {
-
-  
-  // if (event.keyCode >= 65 && event.keyCode <= 90) {
+  if (gameHasStarted === false) {
+    startUp();
+  }
+  else if (isAlpha(event.key)) {
     if (words.indexOf(userGuess) !== -1) {
-      // console.log(first);
       correctGuess();
       checkGameWin();
     }
@@ -98,12 +104,3 @@ document.onkeyup = function(event) {
     }
   };
 };
-    // User guessed correctly
-
-
-// Get user's guess
-// For Each blank
-//   if guess is correct
-// if letter isnt in guessedLetters
-//   add letter to guessedLetters
-//   subtract from guesses

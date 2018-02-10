@@ -2,3 +2,15 @@ body, header {
   background-image: url(../images/BGimage.jpg);
   background-size: cover;
 }
+
+#theImage {
+  width: 100%;
+}
+
+#header {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+p {
+  font-family: 'Courgette', cursive;
+}
