@@ -1,6 +1,5 @@
-body, header {
-  background-image: url(../images/BGimage.jpg);
-  background-size: cover;
+.jumbotron {
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #theImage {
@@ -13,4 +12,17 @@ body, header {
 
 p {
   font-family: 'Courgette', cursive;
+}
+
+.bg, body {
+    /* The image used */
+    background-image: url(../images/BGimage.jpg);
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
